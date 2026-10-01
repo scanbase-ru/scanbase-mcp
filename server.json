@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ru.scanbase/scanbase",
+  "description": "Website compliance checks for Russian personal data law 152-FZ: score, violations, fix instructions.",
+  "repository": {
+    "url": "https://github.com/scanbase-ru/scanbase-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://scanbase.ru/api/",
+  "version": "1.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "scanbase-mcp",
+      "version": "1.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "SCANBASE_API_KEY",
+          "description": "ScanBase API key (sb_live_...). Get a free one at https://scanbase.ru/cabinet/ (Account -> API access).",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}

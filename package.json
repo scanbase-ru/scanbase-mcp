@@ -1,0 +1,52 @@
+{
+  "name": "scanbase-mcp",
+  "version": "1.1.0",
+  "mcpName": "ru.scanbase/scanbase",
+  "description": "MCP-сервер ScanBase — сканер сайтов на соответствие 152-ФЗ (персональные данные) и смежным законам РФ. Даёт AI-агентам инструмент проверки сайтов на юридическое соответствие.",
+  "type": "module",
+  "homepage": "https://scanbase.ru/api/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scanbase-ru/scanbase-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/scanbase-ru/scanbase-mcp/issues",
+    "email": "info@scanbase.ru"
+  },
+  "author": "ScanBase (scanbase.ru)",
+  "bin": {
+    "scanbase-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "scanbase",
+    "152-fz",
+    "compliance",
+    "privacy",
+    "personal-data",
+    "russia"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
